@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
-import { Component } from 'react';
-import './App.css';
+import { Component } from "react";
+import "./App.css";
+import FilmsList from "./components/filmsList";
 
 //function App() {
  // return (
@@ -36,7 +37,7 @@ import './App.css';
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       list: ["Ready", "Set", "GO"],
@@ -54,7 +55,7 @@ class App extends Component {
   }
 
   render() {
-    return(
+    return (
       <div>
         <h1>Hello World!</h1>
         <form onSubmit={this.onSubmit}>
@@ -72,9 +73,10 @@ class App extends Component {
             return <li key={item + idx}>{item}</li>;
           })}
         </ul>
+        <FilmsList />
       </div>
     );
   }
 }
 
-export default App;
+export default FilmsList;
